@@ -7,7 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface BlogVideo {
-        "filename": string;
+        "src": string;
     }
     interface MyComponent {
         /**
@@ -44,7 +44,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface BlogVideo {
-        "filename"?: string;
+        "src"?: string;
     }
     interface MyComponent {
         /**
