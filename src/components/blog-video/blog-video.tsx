@@ -1,4 +1,5 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Element, Prop, h } from '@stencil/core';
+import Plyr from 'plyr';
 
 @Component({
   tag: 'blog-video',
@@ -6,6 +7,16 @@ import { Component, Prop, h } from '@stencil/core';
 })
 export class BlogVideo {
   @Prop() src: string;
+  
+  @Element() el: HTMLElement;
+
+  componentDidRender() {
+    new Plyr(this._videoEl());
+  }
+
+  _videoEl():HTMLElement {
+    return this.el.querySelector('> video');
+  }
 
   render() {
     return (
