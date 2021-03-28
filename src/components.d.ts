@@ -12,20 +12,6 @@ export namespace Components {
          */
         "src": string;
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
-    }
 }
 declare global {
     interface HTMLBlogVideoElement extends Components.BlogVideo, HTMLStencilElement {
@@ -34,15 +20,8 @@ declare global {
         prototype: HTMLBlogVideoElement;
         new (): HTMLBlogVideoElement;
     };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
-    };
     interface HTMLElementTagNameMap {
         "blog-video": HTMLBlogVideoElement;
-        "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
@@ -52,23 +31,8 @@ declare namespace LocalJSX {
          */
         "src"?: string;
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
-    }
     interface IntrinsicElements {
         "blog-video": BlogVideo;
-        "my-component": MyComponent;
     }
 }
 export { LocalJSX as JSX };
@@ -76,7 +40,6 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "blog-video": LocalJSX.BlogVideo & JSXBase.HTMLAttributes<HTMLBlogVideoElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
 }
