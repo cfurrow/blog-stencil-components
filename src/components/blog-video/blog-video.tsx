@@ -5,7 +5,14 @@ import Plyr from 'plyr';
   tag: 'blog-video',
   shadow: false,
 })
+/**
+ * Render the given URL inside an HTML5 video player. Applies a .plyr-video CSS class which is
+ * used by https://plyr.io/ on the blog.
+ */
 export class BlogVideo {
+  /**
+   * The full URL of the video to render in the HTML5 video player.
+   */
   @Prop() src: string;
   
   @Element() el: HTMLElement;

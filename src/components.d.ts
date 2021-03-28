@@ -7,6 +7,9 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface BlogVideo {
+        /**
+          * The full URL of the video to render in the HTML5 video player.
+         */
         "src": string;
     }
     interface MyComponent {
@@ -44,6 +47,9 @@ declare global {
 }
 declare namespace LocalJSX {
     interface BlogVideo {
+        /**
+          * The full URL of the video to render in the HTML5 video player.
+         */
         "src"?: string;
     }
     interface MyComponent {
