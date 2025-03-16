@@ -22,7 +22,7 @@ export class BlogVideo {
   }
 
   _videoEl():HTMLElement {
-    return this.el.querySelector('> video');
+    return this.el.querySelector('video');
   }
 
   render() {
